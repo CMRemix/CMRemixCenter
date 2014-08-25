@@ -152,6 +152,7 @@ public class UpdateChecker extends AsyncTask<Context, Integer, String> {
             boolean tagMatchesDevice = false;
             boolean inFileName = false;
             boolean inDownloadURL = false;
+            boolean inChangelogURL = false;
             while (eventType != XmlPullParser.END_DOCUMENT) {
              if(eventType == XmlPullParser.START_DOCUMENT) {
                  if (mNoLog == false) Log.d(TAG, "Start document");
@@ -159,6 +160,7 @@ public class UpdateChecker extends AsyncTask<Context, Integer, String> {
                  if (xpp.getName().equalsIgnoreCase(strDevice)) tagMatchesDevice = true;
                  else if (tagMatchesDevice && xpp.getName().equalsIgnoreCase("Filename")) inFileName = true;
                  else if (tagMatchesDevice && xpp.getName().equalsIgnoreCase("DownloadUrl")) inDownloadURL = true;
+                 else if (tagMatchesDevice && xpp.getName().equalsIgnoreCase("ChangelogUrl")) inChangelogURL = true;
              } else if(eventType == XmlPullParser.END_TAG) {
                  if (xpp.getName().equalsIgnoreCase(strDevice)) {
                      tagMatchesDevice = false;
@@ -166,6 +168,7 @@ public class UpdateChecker extends AsyncTask<Context, Integer, String> {
                  }
                  else if (tagMatchesDevice && xpp.getName().equalsIgnoreCase("Filename")) inFileName = false;
                  else if (tagMatchesDevice && xpp.getName().equalsIgnoreCase("DownloadUrl")) inDownloadURL = false;
+                 else if (tagMatchesDevice && xpp.getName().equalsIgnoreCase("ChangelogUrl")) inChangelogURL = false;
              } else if(eventType == XmlPullParser.TEXT) {
                  if (tagMatchesDevice && inFileName) {
                     String tempFileName = xpp.getText().trim();
@@ -183,10 +186,13 @@ public class UpdateChecker extends AsyncTask<Context, Integer, String> {
                     } catch (Exception invalidFileName) {
                         Log.e(TAG, "File Name from server is invalid : "+tempFileName);
                     }
-                 }else if (tagMatchesDevice && inDownloadURL) {
+                 } else if (tagMatchesDevice && inDownloadURL) {
                     String tempDownloadURL = xpp.getText().trim();
                     putDataInprefs(mContext, "DownloadUrl",tempDownloadURL);
                     if (newFileName!=null) newUpdateUrl = tempDownloadURL;
+                 } else if (tagMatchesDevice && inChangelogURL) {
+                    String tempChangelogURL = xpp.getText().trim();
+                    putDataInprefs(mContext, "ChangelogUrl",tempChangelogURL);
                  }
              }
              eventType = xpp.next();

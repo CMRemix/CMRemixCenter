@@ -50,6 +50,7 @@ public class SlimLinks extends Fragment {
 
     private String mStrFileNameNew;
     private String mStrFileURLNew;
+    private String mStrChangelogURL;
     private String mStrCurFile;
 
     public View onCreateView (LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -61,7 +62,11 @@ public class SlimLinks extends Fragment {
         @Override
         public void onClick(View v) {
             if (v == mChangelog) {
-                launchUrl(getString(R.string.changelog_url));
+                if (mStrChangelogURL != null && !mStrChangelogURL.isEmpty()) {
+                    launchUrl(mStrChangelogURL);
+                } else {
+                    launchUrl(getString(R.string.changelog_url));
+                }
             } else if (v == mDownload) {
                 if (mStrFileURLNew != null
                         && mStrFileURLNew != "") {
@@ -130,6 +135,7 @@ public class SlimLinks extends Fragment {
         SharedPreferences shPrefs = getActivity().getSharedPreferences("UpdateChecker", 0);
         mStrFileNameNew = shPrefs.getString("Filename", "");
         mStrFileURLNew = shPrefs.getString("DownloadUrl", "");
+        mStrChangelogURL = shPrefs.getString("ChangelogUrl", "");
 
         updateView();
     }
