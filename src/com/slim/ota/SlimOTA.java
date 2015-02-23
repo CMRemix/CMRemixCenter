@@ -179,22 +179,27 @@ public class SlimOTA extends Fragment implements OnSharedPreferenceChangeListene
 
         SharedPreferences prefs = this.getActivity().getSharedPreferences("UpdateChecker", 0);
         String updateFile = prefs.getString("Filename", "");
+        String needUpdate = prefs.getString("NeedUpdate", "");
 
         mUpdateFile.setTextColor(Color.RED);
 
-        if (!UpdateChecker.connectivityAvailable(getActivity())) {
+        if (UpdateChecker.connectivityAvailable(getActivity())) {
+            if (needUpdate.equals("yes")) {
+                if (updateFile.equals("")) {
+                    mStrUpToDate = getString(R.string.error_reading_title);
+                    mStatusIcon.setImageResource(R.drawable.ic_no_data);
+                } else {
+                    mStrUpToDate = updateFile;
+                    mStatusIcon.setImageResource(R.drawable.ic_need_update);
+                }
+            } else {
+                mUpdateFile.setTextColor(Color.GREEN);
+                mStrUpToDate = getString(R.string.up_to_date_title);
+                mStatusIcon.setImageResource(R.drawable.ic_uptodate);
+            }
+        } else {
             mStrUpToDate = getString(R.string.no_data_title);
             mStatusIcon.setImageResource(R.drawable.ic_no_data);
-        } else if (updateFile.equals("")) {
-            mStrUpToDate = getString(R.string.error_reading_title);
-            mStatusIcon.setImageResource(R.drawable.ic_no_data);
-        } else if (updateFile.compareToIgnoreCase(mStrCurVer)<=0) {
-            mUpdateFile.setTextColor(Color.GREEN);
-            mStrUpToDate = getString(R.string.up_to_date_title);
-            mStatusIcon.setImageResource(R.drawable.ic_uptodate);
-        } else {
-            mStatusIcon.setImageResource(R.drawable.ic_need_update);
-            mStrUpToDate = updateFile;
         }
 
         mUpdateFile.setText(" " + mStrUpToDate);

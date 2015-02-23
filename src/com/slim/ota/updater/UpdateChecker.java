@@ -36,6 +36,10 @@ import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
 
+import java.util.Date;
+import java.text.SimpleDateFormat;
+import java.text.ParseException;
+
 import org.xmlpull.v1.XmlPullParser;
 import org.xmlpull.v1.XmlPullParserFactory;
 
@@ -165,11 +169,17 @@ public class UpdateChecker extends AsyncTask<Context, Integer, String> {
              } else if(eventType == XmlPullParser.TEXT) {
                  if (tagMatchesDevice && inFileName) {
                     String tempFileName = xpp.getText().trim();
+                    putDataInprefs(mContext, "Filename", tempFileName);
+
                     String versionOnServer = "";
                     try {
-                        versionOnServer = tempFileName.split("\\-")[2];
-                        putDataInprefs(mContext, "Filename",versionOnServer);
-                        if (versionOnServer.compareToIgnoreCase(slimCurVer)>0) newFileName = tempFileName;
+                        versionOnServer = tempFileName.split("\\-")[3]; // cmRemiX-trltetmo-5.0.2-20131221
+                        cmremixCurVer = cmremixCurVer.split("\\-")[1]; // 5.0.2-20131221
+
+                        boolean needUpdate = isVersionNewer(versionOnServer, slimCurVer);
+                        putDataInprefs(mContext, "NeedUpdate", needUpdate == true ? "yes" : "no");
+
+                        if (needUpdate) newFileName = tempFileName;
                     } catch (Exception invalidFileName) {
                         Log.e(TAG, "File Name from server is invalid : "+tempFileName);
                     }
@@ -188,6 +198,21 @@ public class UpdateChecker extends AsyncTask<Context, Integer, String> {
         } finally {
             if (urlConnection !=null) urlConnection.disconnect();
         }
+    }
+
+    private boolean isVersionNewer(String versionOnServer, String slimCurVersion) {
+        boolean versionIsNew = false;
+
+        try {
+	    final SimpleDateFormat sdf = new SimpleDateFormat("yyyyMMdd");
+	    Date serverDate = sdf.parse(versionOnServer);
+	    Date currentDate = sdf.parse(slimCurVersion);
+	    versionIsNew = serverDate.after(currentDate);
+	} catch(ParseException e){
+	    Log.e(TAG, "Cannot parse version", e);
+	}
+
+	return versionIsNew;
     }
 
     private void putDataInprefs(Context ctx, String entry, String value) {
