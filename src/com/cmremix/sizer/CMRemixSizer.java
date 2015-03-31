@@ -13,7 +13,7 @@
  *
  *=========================================================================
  */
-package com.slim.sizer;
+package com.cmremix.sizer;
 
 import java.io.BufferedWriter;
 import java.io.DataOutputStream;
@@ -44,9 +44,9 @@ import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.Toast;
 
-import com.slim.ota.R;
+import com.cmremix.ota.R;
 
-public class SlimSizer extends Fragment {
+public class CMRemixSizer extends Fragment {
     private final int STARTUP_DIALOG = 1;
     private final int DELETE_DIALOG = 2;
     private final int DELETE_MULTIPLE_DIALOG = 3;
@@ -59,7 +59,7 @@ public class SlimSizer extends Fragment {
     protected DataOutputStream dos;
 
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.slim_sizer, container, false);
+        View view = inflater.inflate(R.layout.cmremix_sizer, container, false);
         return view;
     }
 
@@ -92,7 +92,7 @@ public class SlimSizer extends Fragment {
         safetyList.add("Phone.apk");
         safetyList.add("Settings.apk");
         safetyList.add("SettingsProvider.apk");
-        safetyList.add("SlimCenter.apk");
+        safetyList.add("CMRemixCenter.apk");
         safetyList.add("Superuser.apk");
         safetyList.add("SystemUI.apk");
         safetyList.add("TelephonyProvider.apk");
@@ -202,7 +202,7 @@ public class SlimSizer extends Fragment {
                                         int id) {
                                     // action for ok
                                     // call delete
-                                    new SlimSizer.SlimDeleter().execute(item);
+                                    new CMRemixSizer.CMRemixDeleter().execute(item);
                                     // remove list entry
                                     adapter.remove(item);
                                     adapter.notifyDataSetChanged();
@@ -241,7 +241,7 @@ public class SlimSizer extends Fragment {
                                         }
                                     }
                                     adapter.notifyDataSetChanged();
-                                    new SlimSizer.SlimDeleter().execute(itemsList.toArray(new String[itemsList.size()]));
+                                    new CMRemixSizer.CMRemixDeleter().execute(itemsList.toArray(new String[itemsList.size()]));
                                 }
                             })
                     .setNegativeButton(R.string.cancel,
@@ -289,15 +289,15 @@ public class SlimSizer extends Fragment {
     private void selectDialog(final ArrayList<String> sysAppProfile,
             final ArrayAdapter<String> adapter) {
         AlertDialog.Builder select = new AlertDialog.Builder(getActivity());
-        select.setItems(R.array.slimsizer_profile_array,
+        select.setItems(R.array.cmremixsizer_profile_array,
                 new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int which) {
                         // The 'which' argument contains the index position
                         // of the selected item
                         short state = sdAvailable();
                         File path = new File(Environment
-                                .getExternalStorageDirectory() + "/Slim");
-                        File savefile = new File(path + "/slimsizer.stf");
+                                .getExternalStorageDirectory() + "/CMRemix");
+                        File savefile = new File(path + "/cmremixsizer.stf");
                         if (which == 0) {
                             // load profile action
                             if (state >= 1) {
@@ -325,7 +325,7 @@ public class SlimSizer extends Fragment {
                                         adapter.remove(item);
                                     }
                                     adapter.notifyDataSetChanged();
-                                    new SlimSizer.SlimDeleter().execute(itemsList.toArray(new String[itemsList.size()]));
+                                    new CMRemixSizer.CMRemixDeleter().execute(itemsList.toArray(new String[itemsList.size()]));
                                 } catch (FileNotFoundException e) {
                                     e.printStackTrace();
                                 }
@@ -419,7 +419,7 @@ public class SlimSizer extends Fragment {
         }
     }
 
-    public class SlimDeleter extends AsyncTask<String, String, Void> {
+    public class CMRemixDeleter extends AsyncTask<String, String, Void> {
 
         private ProgressDialog progress;
 

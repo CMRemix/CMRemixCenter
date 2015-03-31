@@ -17,4 +17,4 @@
  *
 -->
 
-<WakefulIntentService listener="com.slim.ota.updater.UpdateListener" />
+<WakefulIntentService listener="com.cmremix.ota.updater.UpdateListener" />

@@ -34,7 +34,7 @@
             android:paddingLeft="10dp"
             android:paddingTop="10dp"
             android:text="@string/center_summary"
-            style="@style/slimMedium" />
+            style="@style/cmremixMedium" />
 
         <TextView
             android:id="@+id/line6"
@@ -44,7 +44,7 @@
             android:gravity="center_horizontal" />
 
         <LinearLayout
-            android:id="@+id/slim_website"
+            android:id="@+id/cmremix_website"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
@@ -69,17 +69,17 @@
                     android:layout_height="wrap_content"
                     android:paddingTop="4dp"
                     android:paddingLeft="5dp"
-                    android:text="@string/slim_website_title"
+                    android:text="@string/cmremix_website_title"
                     android:textAppearance="?android:attr/textAppearanceMedium" />
 
                 </LinearLayout>
 
             <TextView
-                android:id="@+id/slim_website_sum"
+                android:id="@+id/cmremix_website_sum"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:paddingLeft="10dp"
-                android:text="@string/slim_website_summary"
+                android:text="@string/cmremix_website_summary"
                 android:textAppearance="?android:attr/textAppearanceSmall" />
 
         </LinearLayout>
@@ -92,7 +92,7 @@
             android:gravity="center_horizontal" />
 
         <LinearLayout
-            android:id="@+id/slim_bugreport"
+            android:id="@+id/cmremix_bugreport"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
@@ -117,17 +117,17 @@
                     android:layout_height="wrap_content"
                     android:paddingTop="4dp"
                     android:paddingLeft="5dp"
-                    android:text="@string/slim_bugreport"
+                    android:text="@string/cmremix_bugreport"
                     android:textAppearance="?android:attr/textAppearanceMedium" />
 
                 </LinearLayout>
 
             <TextView
-                android:id="@+id/slim_bugreport_sum"
+                android:id="@+id/cmremix_bugreport_sum"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:paddingLeft="10dp"
-                android:text="@string/slim_bugreport_summary"
+                android:text="@string/cmremix_bugreport_summary"
                 android:textAppearance="?android:attr/textAppearanceSmall" />
 
         </LinearLayout>
@@ -140,7 +140,7 @@
             android:gravity="center_horizontal" />
 
         <LinearLayout
-            android:id="@+id/slim_irc"
+            android:id="@+id/cmremix_irc"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
@@ -165,17 +165,17 @@
                     android:layout_height="wrap_content"
                     android:paddingTop="4dp"
                     android:paddingLeft="5dp"
-                    android:text="@string/slim_irc_title"
+                    android:text="@string/cmremix_irc_title"
                     android:textAppearance="?android:attr/textAppearanceMedium" />
 
                 </LinearLayout>
 
             <TextView
-                android:id="@+id/slim_website_sum"
+                android:id="@+id/cmremix_website_sum"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:paddingLeft="10dp"
-                android:text="@string/slim_irc_summary"
+                android:text="@string/cmremix_irc_summary"
                 android:textAppearance="?android:attr/textAppearanceSmall" />
 
         </LinearLayout>
@@ -188,7 +188,7 @@
             android:gravity="center_horizontal" />
 
         <LinearLayout
-            android:id="@+id/slim_donate"
+            android:id="@+id/cmremix_donate"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
@@ -213,17 +213,17 @@
                     android:layout_height="wrap_content"
                     android:paddingTop="4dp"
                     android:paddingLeft="5dp"
-                    android:text="@string/slim_donate_title"
+                    android:text="@string/cmremix_donate_title"
                     android:textAppearance="?android:attr/textAppearanceMedium" />
 
                 </LinearLayout>
 
             <TextView
-                android:id="@+id/slim_website_sum"
+                android:id="@+id/cmremix_website_sum"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:paddingLeft="10dp"
-                android:text="@string/slim_donate_summary"
+                android:text="@string/cmremix_donate_summary"
                 android:textAppearance="?android:attr/textAppearanceSmall" />
 
         </LinearLayout>
@@ -236,7 +236,7 @@
             android:gravity="center_horizontal" />
 
         <LinearLayout
-            android:id="@+id/slim_source"
+            android:id="@+id/cmremix_source"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
@@ -261,17 +261,17 @@
                     android:layout_height="wrap_content"
                     android:paddingTop="4dp"
                     android:paddingLeft="5dp"
-                    android:text="@string/slim_source_title"
+                    android:text="@string/cmremix_source_title"
                     android:textAppearance="?android:attr/textAppearanceMedium" />
 
                 </LinearLayout>
 
             <TextView
-                android:id="@+id/slim_website_sum"
+                android:id="@+id/cmremix_website_sum"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:paddingLeft="10dp"
-                android:text="@string/slim_source_summary"
+                android:text="@string/cmremix_source_summary"
                 android:textAppearance="?android:attr/textAppearanceSmall" />
 
         </LinearLayout>

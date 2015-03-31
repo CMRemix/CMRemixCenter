@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <resources>
-    <string name="app_name">SlimCenter</string>
+    <string name="app_name">CMRemixCenter</string>
     <string name="menu_settings">Definições</string>
     <string name="device_title">Dispositivo</string>
     <string name="device_name_title">Nome:</string>
@@ -13,9 +13,9 @@
     <string name="device_info_title">Informações do dispositivo</string>
     <string name="up_to_date_title">O seu sistema está atualizado</string>
     <string name="no_data_title">Nenhuma conexão de dados disponível</string>
-    <string name="error_reading_title">Não é possível ler as propriedades do SlimOTA</string>
+    <string name="error_reading_title">Não é possível ler as propriedades do CMRemixOTA</string>
     <string name="update_file_title">Atualização:</string>
-    <string name="settings_title">Definições do SlimOTA</string>
+    <string name="settings_title">Definições do CMRemixOTA</string>
     <string name="about_title">Sobre</string>
     <string name="update_interval_title">Intervalo de procura de actualizações automáticas</string>
     <string name="update_interval_summary">Definir intervalo de procura de actualizações automáticas</string>
@@ -31,19 +31,19 @@
     <string name="short_cut_release_title">Relacionado com a ROM</string>
     <string name="short_cut_changelog_title">Changelog</string>
     <string name="short_cut_changelog_summary_update_available">Importante!!! Leia o changelog e as instruções de instalação cuidadosamente</string>
-    <string name="short_cut_download_summary_update_available">Nova atualização da ROM SlimBean disponível. Download aqui!</string>
+    <string name="short_cut_download_summary_update_available">Nova atualização da ROM CMRemixBean disponível. Download aqui!</string>
     <string name="short_cut_changelog_summary">Visualizar changelogs e instruções de instalação</string>
     <string name="short_cut_additional_title">Mais</string>
     <string name="short_cut_faq_title">Perguntas Frequentes</string>
     <string name="short_cut_faq_summary">Visualizar Perguntas Frequentes</string>
     <string name="short_cut_news_title">Notícias</string>
-    <string name="short_cut_news_summary">Leia as últimas notícias Slim</string>
-    <string name="short_cut_download_title">Download SlimBean</string>
-    <string name="short_cut_download_uptodate_summary">Download da ROM SlimBean</string>
+    <string name="short_cut_news_summary">Leia as últimas notícias CMRemix</string>
+    <string name="short_cut_download_title">Download CMRemixBean</string>
+    <string name="short_cut_download_uptodate_summary">Download da ROM CMRemixBean</string>
     <string name="short_cut_download_gapps_title">Download das gapps</string>
-    <string name="short_cut_download_gapps_summary">Download dos pacotes adicionais SlimBean</string>
-    <string name="notification_message">Atualização da ROM SlimBean disponível</string>
-    <string name="about_slim_ota">SlimOTA mantém-te sempre com a ROM\ne as gapps atualizados</string>
+    <string name="short_cut_download_gapps_summary">Download dos pacotes adicionais CMRemixBean</string>
+    <string name="notification_message">Atualização da ROM CMRemixBean disponível</string>
+    <string name="about_cmremix_ota">CMRemixOTA mantém-te sempre com a ROM\ne as gapps atualizados</string>
     <string name="about_contact_text">Diga-nos o que pensa da ROM\nou informe-nos sobre um bug ou um problema</string>
     <string name="about_license">Licenças de código aberto</string>
     <string name="listsystem">lista</string>

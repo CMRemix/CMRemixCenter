@@ -18,7 +18,7 @@
 -->
 
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.slim.ota"
+    package="com.cmremix.ota"
     android:versionCode="1"
     android:versionName="1.1" >
 
@@ -35,12 +35,12 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher_slimota"
+        android:icon="@mipmap/ic_launcher_cmremixota"
         android:label="@string/app_name"
         android:launchMode="singleTask"
-        android:theme="@style/SlimOTA" >
+        android:theme="@style/CMRemixOTA" >
         <activity
-            android:name="com.slim.center.SlimCenter"
+            android:name="com.cmremix.center.CMRemixCenter"
             android:configChanges="orientation|screenSize"
             android:label="@string/app_name" >
             <intent-filter>
@@ -48,22 +48,22 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.slim.ota.SlimOTA"
+            android:name="com.cmremix.ota.CMRemixOTA"
             android:label="@string/ota_title"
-            android:parentActivityName="com.slim.center.SlimCenter" >
+            android:parentActivityName="com.cmremix.center.CMRemixCenter" >
         </activity>
         <activity
-            android:name="com.slim.sizer.SlimSizer"
+            android:name="com.cmremix.sizer.CMRemixSizer"
             android:label="@string/sizer_title"
-            android:parentActivityName="com.slim.center.SlimCenter" >
+            android:parentActivityName="com.cmremix.center.CMRemixCenter" >
         </activity>
         <activity
-            android:name="com.slim.center.AboutSlim"
-            android:label="@string/aboutslim_title"
-            android:parentActivityName="com.slim.center.SlimCenter" >
+            android:name="com.cmremix.center.AboutCMRemix"
+            android:label="@string/aboutcmremix_title"
+            android:parentActivityName="com.cmremix.center.CMRemixCenter" >
         </activity>
 
-        <service android:name="com.slim.ota.updater.UpdateService" />
+        <service android:name="com.cmremix.ota.updater.UpdateService" />
 
         <receiver android:name="com.commonsware.cwac.wakeful.AlarmReceiver" >
             <intent-filter>
@@ -83,12 +83,12 @@
         </receiver>
 
         <activity
-            android:name="com.slim.ota.settings.Settings"
-            android:parentActivityName="com.slim.ota.SlimOTA">
+            android:name="com.cmremix.ota.settings.Settings"
+            android:parentActivityName="com.cmremix.ota.CMRemixOTA">
         </activity>
         <activity
-            android:name="com.slim.ota.settings.About"
-            android:parentActivityName="com.slim.center.SlimCenter">
+            android:name="com.cmremix.ota.settings.About"
+            android:parentActivityName="com.cmremix.center.CMRemixCenter">
         </activity>
     </application>
 

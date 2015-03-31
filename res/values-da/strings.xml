@@ -16,7 +16,7 @@
  * limitations under the License.
 -->
 <resources>
-  <string name="app_name">SlimCenter</string>
+  <string name="app_name">CMRemixCenter</string>
   <string name="menu_settings">Indstillinger</string>
   <string name="device_title">Enhed</string>
   <string name="device_name_title">Navn:</string>
@@ -29,9 +29,9 @@
   <string name="device_info_title">Oplysninger om enheden</string>
   <string name="up_to_date_title">Dit system er opdateret</string>
   <string name="no_data_title">Ingen tilgængelig dataforbindelse</string>
-  <string name="error_reading_title">Kan ikke læse SlimOTA egenskaber</string>
+  <string name="error_reading_title">Kan ikke læse CMRemixOTA egenskaber</string>
   <string name="update_file_title">Opdater:</string>
-  <string name="settings_title">SlimOTA indstillinger</string>
+  <string name="settings_title">CMRemixOTA indstillinger</string>
   <string name="about_title">Om</string>
   <string name="update_interval_title">Automatisk opdateringstjek interval</string>
   <string name="update_interval_summary">Indstil interval for automatisk opdateringstjek</string>
@@ -40,7 +40,7 @@
   <string name="update_interval_hour">Hver time</string>
   <string name="update_interval_disable">Deaktiver</string>
   <string name="system_prop_error">Kan ikke læse systemegenskaber</string>
-  <string name="bad_url">Kan ikke finde indhold at downloade.\nKontakt venligst din enheds Slim-ROM vedligeholder!</string>
+  <string name="bad_url">Kan ikke finde indhold at downloade.\nKontakt venligst din enheds CMRemix-ROM vedligeholder!</string>
   <string name="menu_update">Søg efter opdateringer</string>
   <string name="toast_text">Søger efter ROM opdateringer...</string>
   <string name="toast_no_data_text">Ingen dataforbindelse</string>
@@ -50,18 +50,18 @@
   <string name="short_cut_changelog_summary">Vis ændringslog og installeringsinstruktioner</string>
   <string name="short_cut_additional_title">Yderligere</string>
   <string name="short_cut_faq_title">FAQ</string>
-  <string name="short_cut_faq_summary">Vis Slim FAQ</string>
+  <string name="short_cut_faq_summary">Vis CMRemix FAQ</string>
   <string name="short_cut_news_title">Nyheder</string>
-  <string name="short_cut_news_summary">Læs seneste Slim-nyheder</string>
+  <string name="short_cut_news_summary">Læs seneste CMRemix-nyheder</string>
   <string name="short_cut_download_gapps_title">Download gapps</string>
-  <string name="about_slim_ota">SlimOTA holder altid dig,\ndin ROM og gapps opdateret</string>
+  <string name="about_cmremix_ota">CMRemixOTA holder altid dig,\ndin ROM og gapps opdateret</string>
   <string name="about_contact"><a href="http://otaslim.slimroms.net/contact.htm">Kontakt os</a></string>
   <string name="about_contact_text">Fortæl os hvad du synes\neller hvis du finder fejl eller støder på problemer</string>
   <string name="about_license">Open Source Licenser</string>
-  <string name="about_license_text">SlimOTA app:</string>
-  <string name="menu_slimsizer">SlimSizer</string>
+  <string name="about_license_text">CMRemixOTA app:</string>
+  <string name="menu_cmremixsizer">CMRemixSizer</string>
   <string name="listsystem">liste</string>
-  <string name="sizer_title">SlimSizer</string>
+  <string name="sizer_title">CMRemixSizer</string>
   <string name="caution">Forsigtig!</string>
   <string name="sizer_message_startup">Med dette værktøj kan du slette system apps. Vær forsigtig og slet kun apps du ved med sikkerhed kan fjernes.</string>
   <string name="cancel">Annuller</string>

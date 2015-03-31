@@ -14,7 +14,7 @@
  *=========================================================================
  */
 
-package com.slim.ota;
+package com.cmremix.ota;
 
 import java.io.BufferedReader;
 import java.io.DataInputStream;
@@ -37,12 +37,12 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.slim.ota.updater.UpdateChecker;
-import com.slim.ota.updater.UpdateListener;
-import com.slim.ota.settings.Settings;
+import com.cmremix.ota.updater.UpdateChecker;
+import com.cmremix.ota.updater.UpdateListener;
+import com.cmremix.ota.settings.Settings;
 import com.commonsware.cwac.wakeful.WakefulIntentService;
 
-public class SlimOTA extends Fragment implements OnSharedPreferenceChangeListener {
+public class CMRemixOTA extends Fragment implements OnSharedPreferenceChangeListener {
 
     private static final int ID_DEVICE_NAME = R.id.deviceName;
     private static final int ID_DEVICE_CODE_NAME = R.id.deviceCodename;
@@ -68,7 +68,7 @@ public class SlimOTA extends Fragment implements OnSharedPreferenceChangeListene
 
     SharedPreferences prefs;
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.slim_ota, container, false);
+        View view = inflater.inflate(R.layout.cmremix_ota, container, false);
         return view;
     }
 
@@ -88,7 +88,7 @@ public class SlimOTA extends Fragment implements OnSharedPreferenceChangeListene
         prefs.registerOnSharedPreferenceChangeListener(this);
 
         if (UpdateChecker.connectivityAvailable(getActivity())) {
-           doTheUpdateCheck();
+           if (Settings.isUpdateEnabled(getView().getContext())) doTheUpdateCheck();
         } else {
            Toast.makeText(getView().getContext(), R.string.toast_no_data_text, Toast.LENGTH_LONG).show();
         }
@@ -155,11 +155,11 @@ public class SlimOTA extends Fragment implements OnSharedPreferenceChangeListene
             String strLine;
             while ((strLine = br.readLine()) != null) {
                 String[] line = strLine.split("=");
-                if (line[0].equalsIgnoreCase("ro.slim.device")) {
+                if (line[0].equalsIgnoreCase("ro.cmremix.device")) {
                     mStrCodename = line[1];
-                } else if (line[0].equalsIgnoreCase("slim.ota.version")) {
+                } else if (line[0].equalsIgnoreCase("cmremix.ota.version")) {
                     mStrCurVer = line[1];
-                } else if (line[0].equalsIgnoreCase("ro.slim.model")) {
+                } else if (line[0].equalsIgnoreCase("ro.cmremix.model")) {
                     mStrDevice = line[1];
                 } else if (line[0].equalsIgnoreCase("ro.modversion")) {
                     mStrCurFile = line[1];
@@ -208,15 +208,15 @@ public class SlimOTA extends Fragment implements OnSharedPreferenceChangeListene
     private void addShortCutFragment() {
         FragmentManager fragmentManager = this.getActivity().getFragmentManager();
         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-        SlimLinks slimLinks = new SlimLinks();
-        fragmentTransaction.replace(R.id.linksFragment, slimLinks);
+        CMRemixLinks cmremixLinks = new CMRemixLinks();
+        fragmentTransaction.replace(R.id.linksFragment, cmremixLinks);
         fragmentTransaction.commit();
     }
 
     private void setInitialUpdateInterval() {
         SharedPreferences prefs = this.getActivity().getSharedPreferences(LAST_INTERVAL, 0);
         long value = prefs.getLong(LAST_INTERVAL,0);
-        //set interval to 12h if user starts first time SlimOTA and it was not installed by system before
+        //set interval to 12h if user starts first time CMRemixOTA and it was not installed by system before
         //yes ask lazy tarak....he has this case ;)
         if (value == 0) {
             UpdateListener.interval = AlarmManager.INTERVAL_HALF_DAY;

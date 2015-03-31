@@ -14,9 +14,10 @@
  *=========================================================================
  */
 
-package com.slim.ota.settings;
+package com.cmremix.ota.settings;
 
 import android.app.AlarmManager;
+import android.content.Context;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.preference.ListPreference;
@@ -26,15 +27,15 @@ import android.preference.PreferenceActivity;
 import android.support.v4.app.NavUtils;
 import android.view.MenuItem;
 
-import com.slim.ota.updater.UpdateListener;
-import com.slim.ota.R;
+import com.cmremix.ota.updater.UpdateListener;
+import com.cmremix.ota.R;
 
 import com.commonsware.cwac.wakeful.WakefulIntentService;
 
 public class Settings extends PreferenceActivity implements
         Preference.OnPreferenceChangeListener {
     @SuppressWarnings("unused")
-    private static final String TAG = "SlimOTASettings";
+    private static final String TAG = "CMRemixOTASettings";
 
     private static final String KEY_UPDATE_INTERVAL = "update_interval";
     private static final String LAST_INTERVAL = "lastInterval";
@@ -46,7 +47,7 @@ public class Settings extends PreferenceActivity implements
         super.onCreate(savedInstanceState);
         getActionBar().setDisplayHomeAsUpEnabled(true);
 
-        addPreferencesFromResource(R.xml.slim_ota_settings);
+        addPreferencesFromResource(R.xml.cmremix_ota_settings);
 
         PreferenceScreen prefs = getPreferenceScreen();
 
@@ -103,7 +104,7 @@ public class Settings extends PreferenceActivity implements
             } else {
                 SharedPreferences prefs = getSharedPreferences(LAST_INTERVAL, 0);
                 prefs.edit().putLong(LAST_INTERVAL, 1).apply();
-                com.slim.ota.updater.ConnectivityReceiver.disableReceiver(this);
+                com.cmremix.ota.updater.ConnectivityReceiver.disableReceiver(this);
                 WakefulIntentService.cancelAlarms(this);
             }
     }
@@ -122,6 +123,12 @@ public class Settings extends PreferenceActivity implements
             settingsValue = 3;
         }
         return settingsValue;
+    }
+
+    public static boolean isUpdateEnabled(Context context) {
+        SharedPreferences prefs = context.getSharedPreferences(LAST_INTERVAL, 0);
+        long value = prefs.getLong(LAST_INTERVAL, 0);
+        return value != 1 ? true : false;
     }
 
 }

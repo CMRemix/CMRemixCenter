@@ -13,10 +13,10 @@
  *
  *=========================================================================
  */
-package com.slim.center;
+package com.cmremix.center;
 
-import com.slim.ota.R;
-import com.slim.sizer.SlimSizer;
+import com.cmremix.ota.R;
+import com.cmremix.sizer.CMRemixSizer;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
@@ -51,9 +51,9 @@ import android.view.ViewGroup;
 import android.widget.LinearLayout;
 import android.widget.Toast;
 
-import com.android.internal.util.slim.BuildInfo;
+import com.android.internal.util.cmremix.BuildInfo;
 
-public class AboutSlim extends Fragment{
+public class AboutCMRemix extends Fragment{
 
     private LinearLayout website;
     private LinearLayout source;
@@ -64,7 +64,7 @@ public class AboutSlim extends Fragment{
     private boolean su=false;
     private static final String FILENAME_PROC_VERSION = "/proc/version";
     private static final String LOG_TAG = "DeviceInfoSettings";
-    private static Intent IRC_INTENT = new Intent(Intent.ACTION_VIEW, Uri.parse("ccircslim:1"));
+    private static Intent IRC_INTENT = new Intent(Intent.ACTION_VIEW, Uri.parse("ccirccmremix:1"));
     public File path;
     public String zipfile;
     public String logfile;
@@ -76,7 +76,7 @@ public class AboutSlim extends Fragment{
     byte[] buf = new byte[1024];
 
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.slim_about, container, false);
+        View view = inflater.inflate(R.layout.cmremix_about, container, false);
         return view;
     }
 
@@ -84,16 +84,16 @@ public class AboutSlim extends Fragment{
         @Override
         public void onClick(View v) {
             if (v == website) {
-                launchUrl("http://slimroms.net/");
+                launchUrl("https://plus.google.com/communities/104949237119230496561?hl=en");
             } else if (v == source) {
-                launchUrl("http://github.com/SlimRoms");
+                launchUrl("https://github.com/cmRemiX");
             } else if (v == donate) {
-                launchUrl("http://www.slimroms.net/index.php/donations");
+                launchUrl("http://forum.xda-developers.com/donatetome.php?u=4712992");
             } else if (v == irc) {
                 if (isCallable(IRC_INTENT)){
                     startActivity(IRC_INTENT);
                 } else {
-                    if (BuildInfo.getSlimBuildType().equals("UNOFFICIAL")) {
+                    if (BuildInfo.getcmremixBuildType().equals("UNOFFICIAL")) {
                         ircDialog();
                     } else {
                         toast(getResources().getString(R.string.no_irc));
@@ -111,19 +111,19 @@ public class AboutSlim extends Fragment{
 
         //set LinearLayouts and onClickListeners
 
-        website = (LinearLayout) getView().findViewById(R.id.slim_website);
+        website = (LinearLayout) getView().findViewById(R.id.cmremix_website);
         website.setOnClickListener(mActionLayouts);
 
-        source = (LinearLayout) getView().findViewById(R.id.slim_source);
+        source = (LinearLayout) getView().findViewById(R.id.cmremix_source);
         source.setOnClickListener(mActionLayouts);
 
-        donate = (LinearLayout) getView().findViewById(R.id.slim_donate);
+        donate = (LinearLayout) getView().findViewById(R.id.cmremix_donate);
         donate.setOnClickListener(mActionLayouts);
 
-        irc = (LinearLayout) getView().findViewById(R.id.slim_irc);
+        irc = (LinearLayout) getView().findViewById(R.id.cmremix_irc);
         irc.setOnClickListener(mActionLayouts);
 
-        report = (LinearLayout) getView().findViewById(R.id.slim_bugreport);
+        report = (LinearLayout) getView().findViewById(R.id.cmremix_bugreport);
         report.setOnClickListener(mActionLayouts);
         //request su
         try {
@@ -179,16 +179,16 @@ public class AboutSlim extends Fragment{
          }
         String kernel=getFormattedKernelVersion();
         //check if sdcard is available
-        SlimSizer sizer=new SlimSizer();
+        CMRemixSizer sizer=new CMRemixSizer();
         short state = sizer.sdAvailable();
         //initialize logfiles
         File extdir = Environment.getExternalStorageDirectory();
-        path = new File(extdir.getAbsolutePath().replace("emulated/0", "emulated/legacy") + "/Slim/Bugreport");
+        path = new File(extdir.getAbsolutePath().replace("emulated/0", "emulated/legacy") + "/cmRemiX/Bugreport");
         File savefile = new File(path + "/system.log");
         File logcat = new File(path + "/logcat.log");
         File last_kmsg = new File(path + "/last_kmsg.log");
         File kmsg = new File(path + "/kmsg.log");
-        File zip = new File(Environment.getExternalStorageDirectory() + "/Slim/bugreport.zip");
+        File zip = new File(Environment.getExternalStorageDirectory() + "/cmRemiX/bugreport.zip");
         systemfile = savefile.toString();
         logfile = logcat.toString();
         last_kmsgfile = last_kmsg.toString();

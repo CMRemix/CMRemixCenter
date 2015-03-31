@@ -177,7 +177,7 @@
             android:paddingLeft="5dp"
             android:paddingTop="8dp"
             android:text="@string/short_cut_additional_title"
-            style="@style/slimMedium" />
+            style="@style/cmremixMedium" />
 
         <TextView
             android:id="@+id/line5"

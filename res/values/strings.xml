@@ -16,8 +16,8 @@
 -->
 
 <resources>
-    <!-- SlimOTA main strings -->
-    <string name="app_name">cmRemiXCenter</string>
+    <!-- CMRemix OTA main strings -->
+    <string name="app_name">CMRemix Center</string>
     <string name="menu_settings">Settings</string>
     <string name="device_title">Device</string>
     <string name="device_name_title">Name:</string>
@@ -30,15 +30,15 @@
     <string name="device_info_title">Device Information</string>
     <string name="up_to_date_title">Your system is up to date</string>
     <string name="no_data_title">No data connection available</string>
-    <string name="error_reading_title">Cannot read cmRemiXOTA properties</string>
+    <string name="error_reading_title">Cannot read CMRemixOTA properties</string>
     <string name="update_file_title">Update:</string>
-    <string name="ota_title">cmRemiXOTA</string>
+    <string name="ota_title">CMRemix OTA</string>
     <string name="reboot">All done! Reboot your device now.</string>
     <string name="reboot_ok">Reboot now</string>
     <string name="reboot_cancel">Don\'t reboot</string>
 
-    <!-- SlimOTA settings -->
-    <string name="settings_title">cmRemiXOTA Settings</string>
+    <!-- CMRemix OTA settings -->
+    <string name="settings_title">CMRemixOTA Settings</string>
     <string name="about_title">About</string>
     <string name="update_interval_title">Automatic update check interval</string>
     <string name="update_interval_summary">Set automatic update check interval</string>
@@ -47,44 +47,45 @@
     <string name="update_interval_hour">Every hour</string>
     <string name="update_interval_disable">Disable</string>
 
-    <!-- SlimOTA error messages -->
+    <!-- CMRemix OTA error messages -->
     <string name="system_prop_error">Cannot read system properties</string>
-    <string name="bad_url">Unable to get to download area.\nPlease inform your slim device maintainer!</string>
+    <string name="bad_url">Unable to get to download area.\nPlease inform your CMRemix device maintainer!</string>
     <string name="menu_update">Look for Updates now</string>
     <string name="toast_text">Looking for ROM updates, please wait.</string>
     <string name="toast_no_data_text">No data connection. Please turn on</string>
 
-    <!-- SlimOTA shortcut fragment -->
+    <!-- CMRemix OTA shortcut fragment -->
     <string name="short_cut_release_title">ROM related</string>
     <string name="short_cut_changelog_title">Changelog</string>
     <string name="short_cut_changelog_summary_update_available">Important!!! Read changelog and install instructions carefully</string>
-    <string name="short_cut_download_summary_update_available">New cmRemiX ROM update available. Download here!</string>
+    <string name="short_cut_download_summary_update_available">New CMRemix ROM update available. Download here!</string>
     <string name="short_cut_changelog_summary">Show changelogs and install instructions</string>
     <string name="short_cut_additional_title">Additional</string>
     <string name="short_cut_faq_title">FAQ</string>
-    <string name="short_cut_faq_summary">Show Slim FAQ</string>
+    <string name="short_cut_faq_summary">Show CMRemix FAQ</string>
     <string name="short_cut_news_title">News</string>
-    <string name="short_cut_news_summary">Read about latest Slim news</string>
-    <string name="short_cut_download_title">Download cmRemiX</string>
-    <string name="short_cut_download_uptodate_summary">Download cmRemiX ROM</string>
+    <string name="short_cut_news_summary">Read about latest CMRemix news</string>
+    <string name="short_cut_download_title">Download CMRemix</string>
+    <string name="short_cut_download_uptodate_summary">Download CMRemix ROM</string>
     <string name="short_cut_download_gapps_title">Download gapps</string>
-    <string name="short_cut_download_gapps_summary">Download cmRemiX addon packages</string>
+    <string name="short_cut_download_gapps_summary">Download CMRemix addon packages</string>
 
     <string name="download_url" translatable="false">https://s.basketbuild.com/devs/Zion959/L</string>
     <string name="changelog_url" translatable="false">https://github.com/cmRemiX/CHANGELOGS</string>
     <string name="faq_url" translatable="false">http://www.slimroms.net/index.php/faqandmanual</string>
     <string name="news_url" translatable="false">http://otaslim.slimroms.net/news.htm</string>
-    <string name="gapps_url" translatable="false">http://otaslim.slimroms.net/gapps.htm</string>
-    <string name="gapps_url_kitkat" translatable="false">http://www.slimroms.net/index.php/downloads/dlsearch/viewcategory/1251-addons/downloads</string>
+    <string name="gapps_url" translatable="false">http://www.slimroms.net/index.php/downloads/dlsearch/viewcategory/1251-addons/downloads</string>
+    <string name="gapps_url_lollipop" translatable="false">https://s.basketbuild.com/devs/Zion959/L/Gapps</string>
 
-    <!-- SlimOTA update checker -->
-    <string name="xml_url" translatable="false">https://drive.google.com/file/d/0B-fVzNDmvQSgVDFOTFNUSjN5eXM/view?usp=sharing</string>
-    <string name="xml_url_kitkat" translatable="false">https://drive.google.com/file/d/0B-fVzNDmvQSgODd6UVl1cHJyMWM/view?usp=sharing</string>
-    <string name="notification_message">cmRemiX update available</string>
+    <!-- CMRemix OTA update checker -->
+    <string name="xml_url" translatable="false">https://content.wuala.com/contents/zion959/cmRemiX%20OTA/ota.xml/?dl=1</string>
+    <string name="xml_url_kikat" translatable="false">https://content.wuala.com/contents/zion959/cmRemiX%20OTA/ota_kitkat.xml/?dl=1</string>
+    <string name="xml_url_lollipop" translatable="false">https://content.wuala.com/contents/zion959/cmRemiX%20OTA/ota_lollipop.xml/?dl=1</string>
+    <string name="notification_message">CMRemix update available</string>
 
-    <!-- SlimOTA About -->
-    <string name="about_home_url" translatable="false"><a href="http://www.slimroms.net">www.slimroms.net</a></string>
-    <string name="about_slim_ota">cmRemiXCenter allows you to easily manage\n your ROM!</string>
+    <!-- CMRemix OTA About -->
+    <string name="about_home_url" translatable="false"><a href="https://plus.google.com/communities/104949237119230496561">https://plus.google.com/communities/104949237119230496561</a></string>
+    <string name="about_cmremix_ota">CMRemixCenter allows you to easily manage\n your ROM!</string>
     <string name="about_copyright" translatable="false">\u00A9 Copyright SlimRoms 2014</string>
     <string name="about_version" translatable="false">SlimCenter 1.1</string>
     <string name="about_contact"><a href="http://otaslim.slimroms.net/contact.htm">Contact us</a></string>
@@ -92,11 +93,11 @@
     <string name="about_license">Open source licenses</string>
     <string name="about_license_text">SlimCenter app:</string>
     <string name="about_license_url" translatable="false"><a href="http://otaslim.slimroms.net/license.htm">gpl(2)</a></string>
-    <string name="menu_slimsizer">cmRemiXSizer</string>
+    <string name="menu_cmremixsizer">CMRemixSizer</string>
 
-    <!-- SlimSizer  -->
+    <!-- CMRemix Sizer  -->
     <string name="listsystem">list</string>
-    <string name="sizer_title">cmRemiXSizer</string>
+    <string name="sizer_title">CMRemix Sizer</string>
     <string name="caution">Caution!</string>
     <string name="sizer_message_startup">This tool allows you to delete system apps. Use with caution and only delete apps you know are safe to be removed.</string>
     <string name="cancel">Cancel</string>
@@ -118,22 +119,22 @@
     <string name="sizer_profile_save">Save Profile</string>
 
     <!-- About -->
-    <string name="aboutslim_title">cmRemiXRoms</string>
+    <string name="aboutcmremix_title">CMRemix Roms</string>
     <string name="devs">Developer</string>
-    <string name="slim_website_title">Slim Website</string>
-    <string name="slim_website_summary">www.slimroms.net\nFind all latest Slim news here</string>
-    <string name="slim_irc_title">SlimIRC</string>
-    <string name="slim_irc_summary">Join our IRC channel!\nChat with the Slim Team and other users</string>
-    <string name="slim_donate_title">Donate</string>
-    <string name="slim_donate_summary">Donate to Team SlimRoms</string>
-    <string name="slim_source_title">Slim Source</string>
-    <string name="slim_source_summary">SlimRoms are fully open source.\nSource at github.com/SlimRoms</string>
-    <string name="no_irc">SlimIRC App not found.</string>
-    <string name="no_irc_unofficial">SlimIRC is not available on unofficial builds.</string>
-    <string name="center_summary"><b>SlimCenter</b> provides tools &amp; information to help make your experience with SlimRoms even better. Upgrade automatically to the newest version of our ROM with <b>SlimOTA</b> and remove unwanted system apps with <b>SlimSizer</b>.</string>
-    <string name="slim_bugreport">Bugreport</string>
-    <string name="slim_bugreport_summary">Create a complete Bugreport.</string>
-    <string name="report_infosuccess">Created Systemreport, provide it to Team SlimRoms by attaching it to your Bugreport! You can find the Zip file on your SD-Card in a directory called \"Slim\".</string>
+    <string name="cmremix_website_title">cmRemix Website</string>
+    <string name="cmremix_website_summary">http://forum.xda-developers.com/note-4-tmobile/development/rom-cmremix-rom-v2-5-12-23-14-t2981479/post57692232#post57692232\nFind all latest CMRemix news here</string>
+    <string name="cmremix_irc_title">CMRemixIRC</string>
+    <string name="cmremix_irc_summary">Join our IRC channel!\nChat with the CMRemix Team and other users</string>
+    <string name="cmremix_donate_title">Donate</string>
+    <string name="cmremix_donate_summary">Donate to Team CMRemix Roms</string>
+    <string name="cmremix_source_title">CMRemix Source</string>
+    <string name="cmremix_source_summary">CMRemix Roms are fully open source.\nSource at github.com/cmRemiX</string>
+    <string name="no_irc">cmRemixIRC App not found.</string>
+    <string name="no_irc_unofficial">cmRemixIRC is not available on unofficial builds.</string>
+    <string name="center_summary"><b>cmRemixCenter</b> provides tools &amp; information to help make your experience with CMRemix-Roms even better. Upgrade automatically to the newest version of our ROM with <b>CMRemix-OTA</b> and remove unwanted system apps with <b>CMRemixSizer</b>.</string>
+    <string name="cmremix_bugreport">Bugreport</string>
+    <string name="cmremix_bugreport_summary">Create a complete Bugreport.</string>
+    <string name="report_infosuccess">Created Systemreport, provide it to Zion959 by attaching it to your Bugreport! You can find the Zip file on your SD-Card in a directory called \"CMRemix\".</string>
     <string name="report_infofail">Failed to create Bugreport, please try again.</string>
 
 </resources>

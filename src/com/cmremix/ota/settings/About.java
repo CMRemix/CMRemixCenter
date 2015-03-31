@@ -14,7 +14,7 @@
  *=========================================================================
  */
 
-package com.slim.ota.settings;
+package com.cmremix.ota.settings;
 
 import android.app.ActionBar;
 import android.app.Activity;
@@ -25,8 +25,8 @@ import android.text.method.LinkMovementMethod;
 import android.view.MenuItem;
 import android.widget.TextView;
 
-import com.slim.center.SlimCenter;
-import com.slim.ota.R;
+import com.cmremix.center.CMRemixCenter;
+import com.cmremix.ota.R;
 
 public class About extends Activity {
     @SuppressWarnings("unused")

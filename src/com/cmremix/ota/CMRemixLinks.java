@@ -14,9 +14,9 @@
  *=========================================================================
  */
 
-package com.slim.ota;
+package com.cmremix.ota;
 
-import com.slim.ota.R;
+import com.cmremix.ota.R;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -36,7 +36,7 @@ import java.io.DataInputStream;
 import java.io.FileInputStream;
 import java.io.InputStreamReader;
 
-public class SlimLinks extends Fragment {
+public class CMRemixLinks extends Fragment {
 
     private LinearLayout mChangelog;
     private LinearLayout mDownload;
@@ -54,7 +54,7 @@ public class SlimLinks extends Fragment {
     private String mStrCurFile;
 
     public View onCreateView (LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.slim_ota_links, container, false);
+        View view = inflater.inflate(R.layout.cmremix_ota_links, container, false);
         return view;
     }
 
@@ -76,8 +76,8 @@ public class SlimLinks extends Fragment {
                 }
             } else if (v == mDownloadGapps) {
                 if (mStrCurFile != null
-                    && mStrCurFile.contains("4.4")) {
-                    launchUrl(getString(R.string.gapps_url_kitkat));
+                    && mStrCurFile.contains("5.0")) {
+                    launchUrl(getString(R.string.gapps_url_lollipop));
                 } else {
                     launchUrl(getString(R.string.gapps_url));
                 }

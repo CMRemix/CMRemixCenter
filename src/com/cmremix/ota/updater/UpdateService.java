@@ -14,10 +14,12 @@
  *=========================================================================
  */
 
-package com.slim.ota.updater;
+package com.cmremix.ota.updater;
 
 import android.content.Intent;
 import android.util.Log;
+
+import com.cmremix.ota.settings.Settings;
 
 import com.commonsware.cwac.wakeful.WakefulIntentService;
 
@@ -31,7 +33,7 @@ public class UpdateService extends WakefulIntentService {
     }
 
     public UpdateService() {
-        super("SlimOtaService");
+        super("CMRemixOtaService");
     }
 
     /* (non-Javadoc)
@@ -39,9 +41,11 @@ public class UpdateService extends WakefulIntentService {
      */
     @Override
     protected void doWakefulWork(Intent intent) {
-       if (mNoLog == false) Log.d(TAG, "Slim OTA Update service called!");
-       UpdateChecker otaChecker = new UpdateChecker();
-       otaChecker.execute(getBaseContext());
+       if (mNoLog == false) Log.d(TAG, "CMRemix OTA Update service called!");
+       if (Settings.isUpdateEnabled(getBaseContext())) {
+           UpdateChecker otaChecker = new UpdateChecker();
+           otaChecker.execute(getBaseContext());
+       }
     }
 
 }
