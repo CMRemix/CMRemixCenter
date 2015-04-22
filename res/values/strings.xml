@@ -118,6 +118,10 @@
     <string name="sizer_profile_load">Load Profile</string>
     <string name="sizer_profile_save">Save Profile</string>
 
+    <!-- CMRemix Changelog -->
+    <string name="changelog_title">CMRemixChangelog</string>
+    <string name="changelog_path">/system/etc/changelog.txt</string>
+
     <!-- About -->
     <string name="aboutcmremix_title">CMRemix Roms</string>
     <string name="devs">Developer</string>
