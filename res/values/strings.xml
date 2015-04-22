@@ -74,8 +74,8 @@
     <string name="changelog_url" translatable="false">https://github.com/cmRemiX/CHANGELOGS</string>
     <string name="faq_url" translatable="false">http://www.slimroms.net/index.php/faqandmanual</string>
     <string name="news_url" translatable="false">http://otaslim.slimroms.net/news.htm</string>
-    <string name="gapps_url" translatable="false">http://www.slimroms.net/index.php/downloads/dlsearch/viewcategory/1251-addons/downloads</string>
-    <string name="gapps_url_lollipop" translatable="false">https://s.basketbuild.com/devs/Zion959/L/Gapps</string>
+    <string name="gapps_url" translatable="false"></string>
+    <string name="gapps_url_lollipop" translatable="false">http://209.95.39.164/Gapps/Lollipop/</string>
 
     <!-- CMRemix OTA update checker -->
     <string name="xml_url" translatable="false">https://content.wuala.com/contents/zion959/cmRemiX%20OTA/ota.xml/?dl=1</string>
