@@ -21,6 +21,7 @@ import com.cmremix.ota.R;
 import com.cmremix.ota.CMRemixOTA;
 import com.cmremix.ota.settings.About;
 import com.cmremix.sizer.CMRemixSizer;
+import com.cmremix.changelog.CMRemixChangelog;
 
 import android.app.ActionBar;
 import android.app.FragmentTransaction;
@@ -108,7 +109,7 @@ ActionBar.TabListener{
         @Override
         public int getCount() {
             // Show 3 total pages.
-            return 3;
+            return 4;
         }
 
         @Override
@@ -116,11 +117,13 @@ ActionBar.TabListener{
             Locale l = Locale.getDefault();
             switch (position) {
             case 0:
-                return getString(R.string.aboutcmremix_title).toUpperCase(l);                
+                return getString(R.string.aboutcmremix_title);
             case 1:
-                return getString(R.string.ota_title).toUpperCase(l);                
+                return getString(R.string.ota_title);
             case 2:
-                return getString(R.string.sizer_title).toUpperCase(l);
+                return getString(R.string.sizer_title);
+            case 3:
+                return getString(R.string.changelog_title);
             }
             return null;
         }
@@ -133,6 +136,8 @@ ActionBar.TabListener{
                 return new CMRemixOTA();                
             case 2:
                 return new CMRemixSizer();
+            case 3:
+                return new CMRemixChangelog();
             }
             return null;
         }
