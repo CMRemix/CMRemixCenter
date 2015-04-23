@@ -137,7 +137,7 @@ public class UpdateChecker extends AsyncTask<Context, Integer, String> {
             String newUpdateUrl = null;
             String newFileName = null;
             URL url = null;
-            if (cmremixCurVer != null && cmremixCurVer.contains("LP")) {
+            if (cmremixCurVer != null && cmremixCurVer.contains("LP.5.1.1")) {
                 url = new URL(mContext.getString(R.string.xml_url_lollipop));
             } else {
                 url = new URL(mContext.getString(R.string.xml_url));
