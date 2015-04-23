@@ -76,7 +76,7 @@ public class CMRemixLinks extends Fragment {
                 }
             } else if (v == mDownloadGapps) {
                 if (mStrCurFile != null
-                    && mStrCurFile.contains("5.0")) {
+                    && mStrCurFile.contains("5.1")) {
                     launchUrl(getString(R.string.gapps_url_lollipop));
                 } else {
                     launchUrl(getString(R.string.gapps_url));
